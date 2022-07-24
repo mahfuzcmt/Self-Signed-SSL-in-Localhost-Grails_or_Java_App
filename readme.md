@@ -1,13 +1,13 @@
 ##### keytool is a key and certificate management utility. It allows users to administer their own public/private key pairs and associated certificates for use in self-authentication (where the user authenticates himself/herself to other users/services) or data integrity and authentication services, using digital signatures.
 
-##Open Windows Command Prompt
+## Open Windows Command Prompt
 
- ###Type following commands
+ ### Type following commands
 
      keytool -genkeypair -alias local_ssl -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore local-ssl.p12 -validity 365 -ext san=dns:localhost
-####System will ask you to provide some information and ask you to set a password
+#### System will ask you to provide some information and ask you to set a password
 
-####After successfully generated again type following commands
+#### After successfully generated again type following commands
        
     keytool -export -keystore local-ssl.p12 -alias local_ssl -file local-cert.crt
 
